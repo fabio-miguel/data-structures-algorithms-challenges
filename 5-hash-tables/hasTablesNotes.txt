@@ -1,0 +1,68 @@
+HASH TABLES (Hash Maps(java)/ Dictionaries(python)/Objects(javascript))
+
+- Many different ways to refer to hash tables.
+- For example, in JS, objects are a type of hash table.
+- See them a lot in databases and chaches.
+- So, simply, it's key-value pairs. Typical object.
+- These key value pairs are assigned a "shelf" in memory.
+
+HASH FUNCTION
+
+- A hash function is simply a function that generates a value of fixed length for each input it gets.
+- Indempotent - a function given an input always outputs the same output. 
+- Why would we want this in data structures? Really fast data access!
+- The hash value generated from the function and we immediately know where it isin memory.
+- This hash value is converted to an index space/ an address space that it has based on the hash number. 
+- Unlike arrays with ordered indexes, with hash tables, all we do is give it a key and we know exactly where it is in memory. 
+- So:
+--- We have a key/prop that we put through our hash function
+--- This will hash a value 
+--- And map it to a memory address where we want to store our data (prop&value)
+- Now, despite this going through a hash function and a correct assumption that running this through a function will slow down the process (and there are slower hash functions), this process is relatively quick. 
+
+Hash Tables Big O:
+--- insert - 0(1)
+--- lookup - 0(1)
+--- delete - 0(1)
+--- search - 0(1)
+
+- Hash functions operate fast!
+- insert - we hash the key/prop through the hash function and place it automatically into the address space it comes up with
+- lookup - is the same process ^. 
+- delete - is the same process ^. And, because it's not ordered, we don't have to shift indexes like arrays. 
+- search - is the same process ^. 
+
+--------------------
+Example:
+
+let user = {
+    age: 31,
+    name: "Fabio",
+    likesDogs: true,
+    greet: function() {
+        console.log("Hi");
+    }
+}
+
+user.age // O(1)
+user.hobby("coding") // O(1)
+
+--------------------
+
+// HASH COLLISIONS
+
+- Reminder, there are pros and cons with every data structure
+- Our computer has limited space. 
+- When we create a an object / hash table, the computer decides  how much space to allocate. 
+- It won't allocate all the space to the object, just a bit.
+- The hash function will RANDOMLY assign a space in meory and put the key-value pair there.
+- There's nothing telling the hash function to evenly distribute this data all over.
+- It also matters what we put into the hash function.
+- Sometimes, the data being hashed collides with already mapped hashes. 
+- Note: keys and values are stored in "buckets."
+- Well, because of the collision we need a way to store both entries (or more).
+-  A new data structure called linked lists are used.
+- So, there is a possibility that with enough entries, you get collisions and data is stores in linked lists. 
+- This slows down readign and writing with a hash table.
+- O(n/k) or simply O(n).
+- Now, linked lists is only one way hash collisions are handeled. There are many others. 

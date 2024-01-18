@@ -1,0 +1,83 @@
+
+INTRODUCTION - What are Stacks & Queues?
+
+- They are collections. They are linear data structures with essentially the same meaning they have in everyday life. 
+- Linear data structures allow us to traverse, that is, go through data structures sequentially one by one.
+- In which, one data element can be directly reached.
+- So, when you visualise a stack you can think of a stack of plates & when you visualise a queue simply think of a line waiting for a show. 
+- When you have a stack you can only add or remove things from the top of the stack. You wouldn't usually pull a plate from the bottom or middle of the stack.
+- So, first in the stack is the last out. Last in is the first out (LIFO).
+- The only operations we are concerned with on a stack are push (add to stack), pop (remove from stack), peek (look at the last item in the stack without adding or removing it).
+-* In stacks and queues you mainly deal exclusively with the element at the beginning or end of the data structure. 
+- You may see this as limiting and you are correct. Why only the first or last?
+- Well, we can build things using stacks and queues using arrays or linked lists.
+- But, unlike arrays and linked lists we have less methods/actions we can perform on the stack.
+- So, limiting. But, why beneficial? Because in some cases its best to limit the operations you can do so only the right/efficient operations are used for this data structure. 
+- A real-world example of a stack is any text or graphic editor's undo and redo feature. 
+- So, everytime you do something your actions will get added to an undo stack & when you hit undo thos actions get popped from the stack (& also pushed to a redo stack). 
+- A queue is very similar to a stack with the main difference being that queues are first in first out (FIFO). 
+- So, imagine the queue of people. You can always add people to the queue, but the first person in the queue is the first to leave.
+- The operations that queues work with are endqueue (adding to the queue), dequeue (removing from the queue).
+- A real-world application in the real world is a printer queue. You can queue up multiple print jobs and the printer will process them in order, first in is the first out.
+- You can implement stacks and queues using JavaScript's built-in array methods. 
+- 
+
+
+// -------------------------------------------------------------------
+
+push(element) {
+        this.size++
+        this.storage[this.size] = element; 
+    }
+
+
+- When you use array notation to set a property, JS evaluates the expression in the square brackets.
+- JS implicility converts this.size to a string and it is the property of the assigned element.
+- Therefore, this push method creates key-value pairs in storage object.
+- {1: "dog", 2: "cat", 3: "bird"}
+- Essentially saying, "in the storage object set a property and assign it element."
+- More specifically, "in the storage object associated with this Stack instance, set a property with a key equal to the current size of the stack (this.size), and assign it the value of the element."
+- Note: Using dot notation with a dynamic property name (like the current size of the stack) directly inside the brackets is not possible. Dot notation requires a fixed, literal property name. For dynamic property names, you must use square bracket notation.
+
+// -------------------------------------------------------------------
+
+- The equivalent JS array methods for enqueue and dequeue would be push and shift.
+- This is becasue push would add to the end of array and shift will remove from the beginning of you array. 
+
+// -------------------------------------------------------------------
+
+STACKS
+
+- LIFO
+- Very important in language specific engines 
+- You may have heard of "Stack Overflow"
+- Usually, three operations:
+--- pop - O(1)
+--- push - O(1)
+--- peek - O(1)
+--- lookup - O(n) - BONUS
+
+
+// -------------------------------------------------------------------
+
+QUEUES
+
+- FIFO
+- Usually, three operations:
+--- enqueue - O(1)
+--- dequeue - O(1)
+--- peek - O(1)
+--- lookup - O(n) - Usually not used 
+
+- Question; Why would you not want to use an array for a queue?
+- Answer; Because it's very inefficient. Unshift will remove the first item, but you will also have to shift all the other indexes. 
+
+// -------------------------------------------------------------------
+
+Other Notes:
+
+It is possible for stacks and queues to come up in technichal interviews and you should consider how these data strucutres may be useful in solving certain types of problems.
+
+You are given a string of parenthesis and you have to determine if they're valid. If you're given a string parenthesis, curly braces, brackets... you can actually use a stack to determine whether all of those parenthesis close eachother in a valid way. 
+
+You can use a queue in a stack to determine if a word in a stack is a palindrome.

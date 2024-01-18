@@ -1,0 +1,51 @@
+BIG O NOTATION
+
+"How code slows as data grows"
+- Describes the performance of an algorithm as the amount of data increases.
+
+Example:
+- o(1)
+- o(n)
+- o(log n)
+- o(n^2)
+
+n = amount of data // it's a variable like x
+
+// -------------------------------------------------------------------
+
+Example1 - O(n) - linear time:
+
+function addUp(number) {
+    let sum = 0;
+    for(let i = 0; 1 <= number; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+n = 1000000
+There's ~1000000 steps! 
+This function is said to have a linear runtime complexity. As the amount od data increases, the amount of steps increases proportionally/linearly. 
+
+// -------------------------------------------------------------------
+
+Example2 - O(1) - constant time:
+
+function addUp(number) {
+    let sum = number * (number + 1) /2;
+    return sum;
+}
+
+n = 1000000
+There's 3 steps
+This function is said to have a constant runtime complexity, which is "O" of 1 or O(1).
+The input size doesn't matter as it will be completed in the same/constant amount of steps. 
+Note: even though there are three steps we still say O(1) rather than 0(3) as we dont really care about smaller operations. They wont make much of a difference so it's shortened to 1. 
+
+// -------------------------------------------------------------------
+
+- Anything with an O(1) will take the same amount of time regardless of the data size. Constant time!
+- E.g. random access of an element in an array, inserting at the beginning of a linkedlist. 
+- O(log n) = logarithmic time
+- E.g. binary search
+- Anything with O(log n) time will take increasingly LESS time to complete as the data size increases. 

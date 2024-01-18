@@ -1,0 +1,52 @@
+ARRAYS 
+
+- Sequential data stored contiguously (next to each other) in memory. 
+-----------------------
+- Example:
+
+// store data in memory
+const strings = ['a', 'b', 'c', 'd'];
+// 4*4 = 16 bytes of storage (in a 32 bit system);
+
+// get/lookup data from memory
+string[2]  // O(1)
+
+// push data into array
+string.push('x')  // O(1)
+
+// insert data into array
+string.splice(2, 0, 'alien')  // O(n)
+// inserts into position 2, doesn't delete and adds 'alien' and loops half of the array elements to new indexes. 
+-----------------------
+
+// -------------------------------------------------------------------
+
+STATIC VS DYNAMIC ARRAYS
+
+STATIC
+
+- Limitation of static arrays is that their fixed in size.
+- You will need to specify the number of elems you arr will hold ahead of time.
+
+DYNAMIC
+
+- Dynamic arr allow us to copy and rebuild arr in a new location with more memory (if we wanted more memory).
+--- lookup - O(1)
+--- append - O(1) // *but, it can be O(n)
+--- insert - O(n)
+--- delete - O(n)
+
+- So, when you are using the push method to append to end of an arr, you can assume most of the time it is O(1), but it can be O(n). 
+- Because in a dynamic arr it will loop over the items, copy them, move them to a different location in memory. 
+- And, because of this looping the operation becomes O(n).
+
+// -------------------------------------------------------------------
+
+IMPLEMENTING AN ARRAY
+
+- Data structures are simply things that we can build from scratch.
+- We can create our own.
+- Most data structures are built on top of other data structures.
+- Most common structures are already implemented in most languages.
+- When building an array in JS, we consider that JS is a bit interesting, in the sense that arrays in JS are just objects with integer based keys that act like indexes. 
+- 

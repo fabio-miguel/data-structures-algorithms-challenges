@@ -1,0 +1,97 @@
+WHAT IS A DATA STRUCTURE?
+
+- Simply, a collection of values.
+- These values can have relationships among them.
+- They can have functions applied to them.
+- Each is different in what they can do and what they're best used for.
+- Think of a data structure as different container types.
+- A backpack, drawers, fridge, folder and a box. Each are useful for their own thing. 
+- You wouldn't put your milk in the drawer!
+- Data structures are for organising data! So, we can retrieve that data really easily/fast. 
+- You can put things in data structures and take things from them.
+- Just like there are many containers, there are an overwhelming amount of specific data structures. 
+- However, their are a few general most common. 
+- Bitcoin and the blockchain. This is simply a data structure, a way to hold information. 
+- Now remember, there are always trade-offs! Every programming question has a trade-off:
+--- Readability 
+--- Memory (Space Complexity)
+--- Speed (Time Complexity)
+
+
+HOW COMPUTERS STORE DATA
+
+- In order for a computer to run code, it has to keep track of variables (numebrs, strings, array...).
+- These variables are stored in Random Access Memory (RAM).
+
+- When a program executes, it has two ways to remember things:
+--- The Heap - Usually where we store variables we assign values to.
+--- The Stack - Usually where we keep track of function calls.
+- Sometimes, we want to optimise for using less memroy instead of less time.
+- What causes Space Complexity?
+--- Adding Variables
+--- Adding Data structures (arrays, objects, hash tables)
+--- Function Calls 
+--- Allocations
+
+- As well as RAM, we also have storage.
+- This is where we store our video files, music files, documents etc.
+- Storage can be a disk drive, flash drive, or a solid state drive.
+- Data on storgae is "permanent" or what we call "persistent."
+- I.e. if you turn off your computer it will still be there. 
+- In RAM, you lose memory when the computer turns off. 
+- Question; So, why not always use storage? 
+- Answer; Because persistent storage is slow. 
+- See, the computer is run by its CPU. The little worker that does all the calculations we need. 
+- This CPU needs access to RAM and Storage. But, it can access the RAM much faster. 
+- You can think of RAM as a massive storage area (like a data structure)
+- It has shelves that are numbered (called addresses). These are really big shelves that holds lots of information for us to run programs.
+- Now, each of these shelves holds eight bits (or numbers). E.g. 00000001
+- Each bit or number is a tiny electrical switch that can be turned on or off. 
+- But, instead of calling it "on" or "off" we call it 1 or 0. 
+- 8 bits is called a Byte. 
+- Each shelf has 1 byte of storage. 
+- And, the CPU is connected to something called a memory controller. This does the actual reading of this memory and writing of this memory. 
+- Now, this memory controller has individual connections to each shelf. 
+- Super important as this means we can access the 0 shelf address and then immediately access shelf 7 or 10,000 etc. Without having to "climb down" each shelf. 
+- This is why it's called Random Access Memory, because we can access these shelves or memory really fast as we have these connections to any shelf we want. 
+- The closer information is to the CPU, the less it has to travel. So, the faster a program can run. 
+- So, computers are actually "tuned" to get extra speed bosts when reading memory addresses that are close to each other. 
+- The CPU also has a small cache known as the CPU Cache. 
+- It's a tiny memory where it stores a copy of really recent stuff.
+- Question; So, why is this important for data structures?
+- Remember, data structures are ways for us to store information.
+- Example; let's say you want to store var a = 1; -
+--- The no. 1 is an integer which is represented in 32 bits. That's 4 bytes of RAM or 4 shelves. 
+- *Each data type has a number of bits associated with it, and that needs to get stored in the system. 
+- And, the system allocates that storage and then the CPU reads from that storage.
+- But, data structure is this! You can define the way you interact with this data and how it's arranged in RAM. 
+- So, some data structures in RAM are orgnised next to each other and some apart. This comes with pros and cons.
+- Our goal is to minimise the operation for the CPU to get/write the information.
+
+DATA STRUCTURES IN DIFFERENT LANGUAGES
+
+- Most of the time, these data structures are used:
+--- Arrays
+--- Stacks
+--- Queues
+--- Linked Lists 
+--- Trees
+--- Tries 
+--- Graphs 
+--- Hash Tables 
+
+- Algorithms:
+--- Sorting
+--- Dynamic Programming 
+--- BFS + DFS (Searching)
+--- Recursion 
+
+- Each language has it's own data types.
+- For example, JS has numbers, strings, boolean, object, undefined 
+- And, each leanguage has data structures to organise data types. 
+- For example, in JS we have arrays and objects that we use to organise these data types. 
+
+
+WHAT ARE THE OPERATIONS THAT CAN BE PERFORMED ON DATA STRUCTURES
+
+- Each data structure has its trade-offs
