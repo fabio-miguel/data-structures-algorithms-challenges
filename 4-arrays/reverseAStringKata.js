@@ -1,3 +1,8 @@
+// Given a string of "Fabio"
+// It should return "oibaF"
+
+// -------------------------------------------------------------------
+
 // METHOD1
 
 function reverse (str) {

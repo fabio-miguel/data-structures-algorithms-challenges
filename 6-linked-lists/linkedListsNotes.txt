@@ -1,0 +1,83 @@
+LINKED LISTS
+
+- Singly and Doubly linked lists 
+
+- Problem with static arrays is there's only a certain amount of memory that can be allocated next to each other.
+- But, both dynamic and static arrays can increase their memory once it hits a certain limit.
+- It can double up that memory in another location. 
+- But, that's O(n), thus a performance implication. 
+- Additionaly, arrays had bad performance for inserts and deletes, particularly if not end of array.
+
+- Problem with hash tables is that they weren't ordered. 
+
+WHAT IS A LINKED LIST?
+
+- A singly linked list contains a set of nodes. 
+- Each node has two values:
+--- The value of the data you want to store.
+--- And, a pointer to the next node in line. 
+- The first node is called the head.
+- The last node is called the tail.
+- linked lists are null terminated. So, we know what the tail node is because it points to null (nothing coming after it).
+- So, linked lists are a fairly simple data structure. It's simple an element that points to an element, which point to another element and so on until null.
+- You can have them sorted and unsorted and nodes can contain any datatype.
+- JavaScript does NOT come with linked lists built in.
+- Languages like Java do have linked lists built in.
+
+WHY LINKED LISTS?
+
+- Linked lists have somewhat of a loose structure, which allows you to insert a value to the middle of the list by simply reseting a few pointers.
+- This is the same for deleting a node. 
+- Remember, in an arr, to insert an elem in the middle of a list iteration takes places and index of elems have to shift - O(n).
+- The main difference between arrays and linked lists is that in an arr, elements are indexed. 
+- To get to an elem in a linked list, you start at the head and traverse the list of nodes until you get to the elem - O(n).
+- This concept of traveral is the same as iteration with arrays.
+- Note: traverse and iteration are used interchangeably, though there are differences. 
+- We like to call it traversal in a linked list, because we don't really know when the linked list will end. Keep going until you hit null. 
+- So, when building a linked list you will use a "while" loop because you don't really know how long the list will be. 
+- An advantage arrays have is that most computers having caching systems which make reading from sequential memory (memory next to each other) faster than reading scattered memory addresses.  
+- Linked lists and nodes are scattered all over memory, like hash tables. 
+- So, traversing a linked list is usually a bit slower than iterating over an array even though their both technically - O(n). 
+- However, the inserts you can do in a linked list are better than in an array. 
+- Hash tables are also quick as there's no unshifting of index. Simply, store at a random memory address. 
+- You can also delete nodes very easily compared to an array. 
+- However, the one advantage that linked lists have over hash tables is that there is some kind of order!
+- Each node points to the next node. So, you can have sorted data. 
+- Big O of linked lists:
+--- prepend - O(1) - add to head of linked list
+--- append - O(1) - add to tail of linked list
+--- lookup - O(n) - i.e. traversal - have to start at head and traverse. 
+--- insert - O(n) - because you have to traverse one by one to find the index and insert there.
+--- delete - O(n) - again, have to traverse the items to delete. 
+
+WHAT IS A POINTER?
+
+- A pointer is simply a reference to an object. 
+- Example:
+
+let obj1 = { a: true };
+let obj2 = obj1;
+
+- In memory, there is only one location where "a is true"
+- And, both obj1 and obj2 point to the same location in memory. 
+
+let obj1 = { a: true };
+let obj2 = obj1;
+obj1.a = "booya";
+delete obj1;
+
+console.log("1", obj1); // undefined
+console.log("2", obj2); // {a: "booya"}
+
+- Notice how deleting obj1 didn't delete the object!
+- This is because there is still a pointer / a reference to the object in memory (i.e. let obj2 = obj1);
+- Now, if you reassigned obj2 then it would automatically delete the object in memory. This is a feature of JS. 
+- However, in other languages, you will have to manage your own memory and manually delete the undreferenced item in memory. 
+
+- To summarise, a pointer is simply a reference to something else in memory. Specifically, to another node.  
+- Linked lists are great for inserting and deleting data.
+- But, they are bad for lookups / direct access, unlike arrays which are great. 
+- This is because they aren't contiguous in memory.
+- If you have a volatile data set that's always changing, then it's probably advantageous to use a linked list.
+
+
