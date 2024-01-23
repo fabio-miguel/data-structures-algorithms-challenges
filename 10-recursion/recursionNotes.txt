@@ -1,0 +1,39 @@
+WHAT ARE ALGORITHMS?
+
+- Under the hood, algoritms are simply functions that programmers write.
+- So, a two-line function is technically an algorithm.
+- They are steps, in a process, that we take to perform a desired action. 
+- Data Structures   +    Algorithms     =   Programs
+-    Class {}       +    function()     =   Programs 
+
+// -------------------------------------------------------------------
+
+ALGORITHM FOCUS:
+
+- Recursion
+- Sorting 
+- BFS & DFS 
+- Dynamic Programming 
+
+// -------------------------------------------------------------------
+
+WHY IS THIS IMPORTANT?
+
+- Big O and scalability of code is important, particularly as companies get larger and larger. 
+
+// -------------------------------------------------------------------
+
+RECURSION 
+
+- Recursion is technically not an algorithm but rather a concept.  
+- A function calling itself based on a terminating condition.
+
+STACK OVERFLOW
+
+- A stack will hold recursive function calls. 
+- And a "downfall" of recursion is that you have to hold onto each of these calls and remember them one by one, which can get really expensive. 
+- The computer needs to allocate memory to remember things.
+- Stack overflow can occur when there is no way to stop this recursive call. 
+- This is why you need a base case to stop a recursive function from overflowing. 
+
+

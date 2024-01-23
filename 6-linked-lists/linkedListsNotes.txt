@@ -81,3 +81,19 @@ console.log("2", obj2); // {a: "booya"}
 - If you have a volatile data set that's always changing, then it's probably advantageous to use a linked list.
 
 
+---------------------------------------------------------
+
+WHY USE A LINKED LIST INSTEAD OF AN ARRAY?
+
+1. No reindexing:
+--- For removing the the head (shifting) or removing a node in between the head and the tail, it's much more efficient than an array that must reindex the whole array from the position of removal. 
+
+2. More efficient insertion:
+--- Again, no reindexing from point of insertion (except the tail). This is usually a problem for large arrays, especially if you want to insert at the beginning of an array. 
+
+3. Great for queues as O(1) first item removal:
+--- Items are not indexed, but ordered (by the next prop / pointer). In arrays the FIFO is an O(n) operation as n is dependent upon the array's length.
+
+---------------------------------------------------------
+
+

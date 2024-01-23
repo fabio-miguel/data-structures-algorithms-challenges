@@ -1,4 +1,64 @@
+REMINDER
 
+- Linked lists are a type of a tree. They have a linear data structure.
+
+// -------------------------------------------------------------------
+BST
+
+- Most common tree structure and a subset of the binary tree structure. 
+- Binary trees have a hierarchical structure. 
+- Each node can only have 0, 1 or 2 nodes.
+- Each node represents a certain state. 
+
+- Big O:
+--- lookup - O(log n)
+--- insert - O(log n)
+--- delete - 0(log n)
+
+
+// -------------------------------------------------------------------
+O(log n)
+
+What is a Logarithm?
+- A logarithm is the POWER / exponent of the base number that needs to be raised by to get another number.
+- In computer science, 2 is the common base number (binary).
+
+
+- Because of the way binary trees are structured, there is a certain whay for us to calculate the number of nodes that they have. 
+--- level 0 (top node): 2^0 = 1
+--- level 1: 2^1 = 2
+--- level 2: 2^2 = 4
+--- level 3: 2^3 = 8 
+  
+- No. of nodes = 2^h - 1
+- In a base 10 system, 2 is the logrithm (the power / exponent) to raise a base number.
+- Also, note that "h" or height starts at 1, thus we subtract 1 to account for this. 
+
+// -------------------------------------------------------------------
+
+PROBLEMS WITH BST
+
+- If you have heavily unbalanced tree, you can essentially end up with a linked list where you will have to traverse every node. 
+- In this unbalanced tree, lookup, insert and delete become O(n), like linked lists. 
+- Therefore, ideally we want to balance our search trees, so we can have the O(log n) performance optimisation.
+- AVL & Red Black trees are examples that help balance a tree.
+
+ // -------------------------------------------------------------------
+
+ PROS 
+
+ - Better than O(n) operations. All O(log n). So, really good performance across the board (if balanced).
+ - Ordered.
+ - Flexible size as you can place the node anywhere in memory.
+
+ CONS 
+
+ - No O(1) operations as you usually have to do some sort of traversal through the tree for ANY sort of operation. 
+ - Worst case (if unblanaced) all operations can become O(n). 
+
+
+// -------------------------------------------------------------------
+binarySearchTree.js
 // -------------------------------------------------------------------
 
 - "Node" is a class that instantiates node object instances
@@ -65,4 +125,22 @@ dfsInOrder() {
 - Note: pre-order and post-order depth first search follow a similar logic, just in different order
 - Note: also, this could have been completed without recursion, by using a while loop. But, three lines of code is readable and maintainable. 
 
-    // -------------------------------------------------------------------
+// -------------------------------------------------------------------
+
+OTHER TREE STRUCTURES
+
+1. Binary Heap:
+-- Child nodes are less than parent nodes. However, they aren't sorted to left is always less and right is always more than parent node. 
+
+-- Big 0:
+---- lookup - O(n)
+---- insert - O(log n)
+---- delete - O(log n)
+
+-- Why Binary Heap? 
+---- Really great at doing comparative operations, which would be a hard / O(n) operation on a BST. 
+---- For example, I want all the values 
+ 
+-- Uses:
+---- Data storage, priority queues, sorting algortihms. 
+
