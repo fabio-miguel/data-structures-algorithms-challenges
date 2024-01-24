@@ -1,0 +1,54 @@
+SORTING
+
+- First, you will likely never have to write a sorting algorithm as frameworks do that for you!
+- But, important to understand how they work.
+
+// -------------------------------------------------------------------
+
+ BUBBLE SORT ("simple", not common, not efficient)
+
+- One of the simplist coding algorithms, but also one of the least efficiecnt!
+- Time Complexity of O(n^2)
+- Space Complexity of O(1) - i.e. doesn't add any additional data besides the input.
+
+// -------------------------------------------------------------------
+
+
+ INSERTION SORT ("simple", some cases, not efficient)
+
+ - Some cases it is fast. However, usually not efficient. 
+ - Useful for times you are certain the list is almost sorted.
+ - Time Complexity of O(n^2)
+
+
+
+// -------------------------------------------------------------------
+
+ SELCTION SORT ("simple", not common, not efficient)
+
+- Scans for the smallest and then swaps for the elem in the first position.
+- Time Complexity of O(n^2)
+- Space Complexity of O(1)
+
+// -------------------------------------------------------------------
+
+ MERGE SORT
+
+ - Principle of divide and conquer.  
+
+ - Time Complexity of O(n log n)
+ - Space Complexity of O(n) // Note: bigger space complexity
+
+
+// -------------------------------------------------------------------
+
+REFLECTIVE NOTES
+
+I didn't spend too long on understanding Bubbe, Selection and Insertion Sort. This is because its use case is very rare. I have a general understanding of how they function. Generally, nested for loops which give it a time complexity of O(n^2), which isn't very effecient. In summary, these are algorithms I will revisit if the usecase for them presents itself. Until then, having a general understanding should put you "in good stead."
+
+To know how to build a sort algorithm is probably excessive. For example. building a merge sort algorithm was difficult. Again, frameworks do this for you so it's more about understanding... 
+
+***
+that there are many types of sorting algorithms and that there is no best sorting algorithm. Each algorithm has been designed for a specific data structure where it performs best.
+***
+

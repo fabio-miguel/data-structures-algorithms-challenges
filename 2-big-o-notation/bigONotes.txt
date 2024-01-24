@@ -25,7 +25,7 @@ function addUp(number) {
 
 n = 1000000
 There's ~1000000 steps! 
-This function is said to have a linear runtime complexity. As the amount od data increases, the amount of steps increases proportionally/linearly. 
+This function is said to have a linear runtime complexity. As the amount of data increases, the amount of steps increases proportionally/linearly. 
 
 // -------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ function addUp(number) {
 
 n = 1000000
 There's 3 steps
-This function is said to have a constant runtime complexity, which is "O" of 1 or O(1).
+This function is said to have a constant runtime complexity, which is O(1).
 The input size doesn't matter as it will be completed in the same/constant amount of steps. 
 Note: even though there are three steps we still say O(1) rather than 0(3) as we dont really care about smaller operations. They wont make much of a difference so it's shortened to 1. 
 
