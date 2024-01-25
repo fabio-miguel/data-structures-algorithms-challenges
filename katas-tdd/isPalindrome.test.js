@@ -1,13 +1,13 @@
 const {isPalindrome} = require("./isPalindrome")
 
 describe("isPalindrome", () => {
-    it("should return a boolean", () => {
-        expect(typeof isPalindrome("string")).toBe("boolean");
+    it("should return true when given an empty string", () => {
+        expect(isPalindrome("")).toBe(true); 
     })
-    it("should return an error if input is not a string", () => {
-        expect(isPalindrome(5)).toBe("must input a string");
+    it("should return false when not given palindrome of two characters", () => {
+        expect(isPalindrome("ab")).toBe(false); 
     })
-    it("should return true if string is a Palindrome", () => {
-        expect(isPalindrome("Abba")).toBe(true);
+    it("should return false when not given palindrome of four characters", () => {
+        expect(isPalindrome("abca")).toBe(false);
     })
 })

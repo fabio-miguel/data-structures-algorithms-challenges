@@ -1,17 +1,16 @@
 
 function isPalindrome(input) {
-    if (typeof input !== "string") {
-        return "must input a string";
-    } 
-
-    const lowercase = input.toLowerCase();
-    const reversed = input.split("").reverse().join("").toLowerCase();
-
-    if (reversed === lowercase) {
-        return true;
-    } else {
-        return false;
+    for (let i = 0; i < input.length; i++) {
+        const endOfArray = input.length - 1;
+        if (input[i] !== input[endOfArray - i]) {
+            return false;
+        }
     }
+    
+    return true;
 }
 
 module.exports = { isPalindrome };
+
+
+// abba
