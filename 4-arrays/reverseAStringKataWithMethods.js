@@ -2,6 +2,9 @@
 // It should return "oibaF"
 
 // -------------------------------------------------------------------
+// Note: An optimised version of this kata has been completed (using TDD)
+//       This can be found in the katas-tdd folder
+// -------------------------------------------------------------------
 
 // METHOD1
 

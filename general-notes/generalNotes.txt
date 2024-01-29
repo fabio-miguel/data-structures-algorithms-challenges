@@ -1,0 +1,18 @@
+// - Before completing a kata you should be thinking wholly about the problem by asking about edge cases. 
+// - It's about gathering requirements. You are given a problem therefore understand the scope of the solution.
+// - For example, in the reverseAString.js is it a requirement to handle non-string inputs?
+// - So, can you communicate:
+// --- your planned algorithm
+// --- the space & time complextiy of it 
+// --- edge cases considered
+// --- then get to the implementation 
+
+IMMUTABILITY
+
+Can data be changed? 
+Consider a JS array. If you push the the array, you are mutating that array! It's not important for small programs, but for larger applications this is a problem.
+For larger more complex programs, you should try to minimise state changes as much as possible. 
+
+In React, it has it's own state in memory. And, when you set the state, it gives its copy of state and you return a transformation function from the prev state to the desired state. 
+Then, React will swap the states. You're never modifying the same one, you are simply just swapping them. 
+So, you can go back in time and ask for the prev state, which makes it much easier to debug the program. 

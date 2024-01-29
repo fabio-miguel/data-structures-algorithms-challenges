@@ -49,3 +49,18 @@ Note: even though there are three steps we still say O(1) rather than 0(3) as we
 - O(log n) = logarithmic time
 - E.g. binary search
 - Anything with O(log n) time will take increasingly LESS time to complete as the data size increases. 
+
+// -------------------------------------------------------------------
+
+C NOTES:
+
+Example - Problem and its optimisation
+
+- Let's say you have two lists of names and you want to see if all names exists in both lists. So, is the name in one list also in the other list? (Assume lists are the same length).
+- That means you are iterating through the first list, so that's O(n), where n is the length of the list.
+
+list1 = [C,C,C,C,F] - iterating through list at least once, so that's O(n)
+list2 = [C,C,C,C,F] - but, for each iteration, you are iterating over the list again! So, that's O(n^2)
+
+- Would be better to convert the list into a set, which takes linear time because you will have to iterate over each item in a list to put it into the set. 
+- But then, for each item in the set, the lookup is constant.
